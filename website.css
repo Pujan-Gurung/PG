@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    height: 1080px;
+    width: 1264px;
+    background-image: url( hotel.png );
+    background-position: center;
+    position: relative;
+    background-size:cover;
+}
+.logo{
+    width:100px;
+    height:108px;
+    padding: 1% 2%
+}
+nav{ 
+    display:flex;
+    padding:0% 3%;
+    justify-content:space-between;
+    align-items:center;
+    margin: 0 auto;
+}
+nav img{
+    width:150px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: cornsilk;
+}
+.links{
+    flex:1;
+    text-align:center;
+    padding: 0% 27%
+}
+a:hover{
+    color: bisque;
+}
+.header .logo{
+
+}
+.header .links{
+    display:flex;
+    gap: 2rem;
+}
+.header .btn{
+    color: azure;
+    font-size:1.5rem;
+    cursor: pointer;
+    display:none;
+}
+.button{
+    background-color: rgb(224, 215, 178);
+    color:azure;
+    padding: 0.5% 1%;
+    outline:none;
+    border:none;
+    border-radius: 20px;
+    font-size: 0.8 rem;
+    font-weight: bold;
+    transition: scale 0.2 ease;
+    cursor: pointer;
+
+} 
+.button:hover{
+    scale:1.05;
+    color:aliceblue;
+}
+.button:active{
+    scale:0.95;
+}
+.searchnav{
+    overflow: hidden;
+    background-color: antiquewhite;
+}
+.searchnav input[type=text]{
+    float: initial;
+    margin-top: 8px;
+    border:none;
+    font-size:18px;
+    border: 1px solid #ccc;
+}
+.searchnav :hover{
+    background-color:#ddd;
+    color:black;
+}
+
+
+
