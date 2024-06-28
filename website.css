@@ -5,14 +5,49 @@
 .header {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(hotel.png);
+    background: url(img4.jpg);
     background-position: center;
     background-size:cover;
+    background-repeat: no-repeat;
+    animation: change 15s infinite ease-in-out;
+}
+@keyframes change{
+    0%
+    {
+        background-image: url(img4.jpg);
+    }
+    20%
+    {
+        background-image: url(img3.png);
+    }
+    40%
+    {
+        background-image: url(img2.jpg);
+    }
+    60%
+    {
+        background-image: url(Hotel.jpg);
+    }
+}
+.preload-images{
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -9999px;
+    top: -9999px;
+    overflow: hidden;
+}
+.preload-images img{
+    width: 1px;
+    height: 1px;
 }
 .navbar{
-    width:1200px;
-    height: 75px;
+    width:100%;
+    height: 80px;
     margin:auto;
+    position:fixed;
+    background-color: #5c53467a;
+    z-index:10;
 }
 .icon{
     width: 200px;
@@ -22,7 +57,7 @@
 .logo{
     font-family: Arial, sans-serif;
     font-size: 35px;
-    color: purple;
+    color: #CBA328;
     float:left;
     padding-left: 20px;
     padding-top: 10px;
@@ -46,13 +81,13 @@ ul li{
 }
 ul li a{
     text-decoration: none;
-    color: white;
+    color: #FFFFF0;
     font-family: Arial, sans-serif;
     font-weight: bold;
     transition:  0.4s ease-in-out;
 }
 ul li a:hover{
-    color: purple;
+    color: #CBA328;
 }
 .searchbar{
     width: 330px;
@@ -64,9 +99,9 @@ ul li a:hover{
     width: 200px;
     height: 40px;
     background:transparent;
-    border: 1px solid white;
+    border: 1px solid #FFFFF0;
     margin-top: 13px;
-    color: white;
+    color: #FFFFF0;
     font-size: 16x;
     float: right;
     padding: 20px;
@@ -75,4 +110,25 @@ ul li a:hover{
 }
 .srch:focus{
     outline: none;
+}
+.text{
+    color:white;
+    text-align:left;
+    padding:10% 11%;
+}
+button{
+    color:white;
+    background-color: #f4f4ec57;
+    font-size:20px;
+    border-color: rgba(255, 255, 255, 0.63);
+}
+button:hover{
+    color:#CBA328;
+}
+.aboutpage{
+    background-color:white;
+    text-align:center;
+    padding: 10%;
+    width:80%;
+    height:30%;
 }
