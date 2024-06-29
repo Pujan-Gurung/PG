@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OcArine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .book{
+            width: 90%;
+            height: 80vh;
+            padding:4%;
+            margin-left: auto;
+            margin-right: auto;
+            background: url(Deluxe.png);
+            background-position: center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            animation: change 15s infinite ease-in-out;
+        }
+        @keyframes change{
+            0%
+            {   
+                background-image: url(deluxe\ \(2\).png);
+            }
+            20%
+            {
+                background-image: url(single.png);
+            }
+            40%
+            {
+                background-image: url(vip.jpg);
+            }
+            60%
+            {
+                background-image: url(Deluxe.png);
+            }
+        }
+        .preload-images{
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -9999px;
+            top: -9999px;
+            overflow: hidden;
+        }
+        .preload-images img{
+            width: 1px;
+            height: 1px;
+        }
+        .middle{
+            width:50%;
+            margin:0 auto;
+            padding:20px;
+            border:1px solid #ccc;
+            border-radius:4px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+<body>
+    <div class="book">
+        <h1 style="text-align:center;color:#CBA328"><b>Available rooms</b></h1>
+        <div class="preload-images">
+            <img src="img4.jpg" alt="Preload Image">
+            <img src="img3.png" alt="Preload Image">
+            <img src="img2.jpg" alt="Preload Image">
+            <img src="Hotel.jpg" alt="Preload Image"> 
+        </div>
+    </div>
+    <div class="middle">
+        <form action="submit.html">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+          <label for="date">Day</label>
+          <select id="date" name="date">
+            <option value="sunday">Sunday</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+          </select>
+      
+          <label for="room">Available rooms</label>
+          <select id="room" name="room">
+            <option value="deluxe">Deluxe, Master bed</option>
+            <option value="del">Deluxe, Double bed</option>
+            <option value="de">Deluxe, Single bed</option>
+            <option value="vip">VIP Longue</option>
+          </select>
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      
+    </div>
+</body>
